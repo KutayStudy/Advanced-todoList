@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced To-Do</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body data-theme="neon">
+  <div class="todo-container">
+    <div class="topbar">
+      <div class="title">
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M9.2 12.6l1.9 1.9 3.8-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4.5 6.5a3 3 0 013-3h9a3 3 0 013 3v11a3 3 0 01-3 3h-9a3 3 0 01-3-3v-11z" stroke="currentColor" stroke-opacity=".9" stroke-width="1.6"/>
+          </svg>
+        </div>
+        Advanced To-Do
+      </div>
+
+      <div class="rightTools">
+        <select id="themeSelect" class="themeSelect" aria-label="Theme">
+          <option value="neon">Neon</option>
+          <option value="dark">Dark</option>
+          <option value="light">White</option>
+          <option value="tony">Tony Stark</option>
+        </select>
+
+        <div class="dots" aria-hidden="true">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="inputRow">
+        <input type="text" id="taskInput" placeholder="Add a new task..." />
+        <input type="date" id="dueInput" aria-label="Due date" />
+        <select id="prioritySelect" aria-label="Priority">
+          <option value="low">Low priority</option>
+          <option value="medium" selected>Medium priority</option>
+          <option value="high">High priority</option>
+        </select>
+        <button class="add-btn" id="addBtn" type="button">Add</button>
+      </div>
+
+      <div class="metaRow">
+        <input id="searchInput" placeholder="Search tasks..." aria-label="Search" />
+        <select id="sortSelect" aria-label="Sort">
+          <option value="manual" selected>Manual (Drag)</option>
+          <option value="priority">Sort by Priority</option>
+          <option value="due">Sort by Due Date</option>
+        </select>
+        <div id="counter">0 total • 0 active • 0 completed</div>
+      </div>
+
+      <div class="filters">
+        <button class="filterBtn active" id="filterAll" type="button">All</button>
+        <button class="filterBtn" id="filterActive" type="button">Active</button>
+        <button class="filterBtn" id="filterCompleted" type="button">Completed</button>
+      </div>
+    </div>
+
+    <div id="emptyState">
+      <div class="big">No tasks yet.</div>
+      <div class="small">Add your first task above.</div>
+    </div>
+
+    <ul class="todo-list" id="todoList"></ul>
+
+    <div class="footer">
+      <span id="tasksLeft">0 tasks left</span>
+      <button id="clearCompletedBtn" type="button">Clear Completed</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
