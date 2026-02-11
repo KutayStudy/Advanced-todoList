@@ -1,4 +1,8 @@
-# Advanced Todo List
+<p align="center">
+  <img src="assets/preview.png" alt="Advanced To-Do Screenshot" width="900" />
+</p>
+
+<h1 align="center">Advanced Todo List</h1>
 
 A modern, fully client-side **Todo List application** built to demonstrate strong frontend fundamentals using **HTML, CSS, and Vanilla JavaScript**.
 
